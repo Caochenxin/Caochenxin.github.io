@@ -1,4 +1,4 @@
-(function(window){
+﻿(function(window){
 
     function random(min, max) {
         return min + Math.floor(Math.random() * (max - min + 1));
@@ -168,8 +168,8 @@
 
             ctx.moveTo(0, 0);
             ctx.scale(0.75, 0.75);
-            ctx.font = "12px 微软雅黑,Verdana"; // 字号肿么没有用? (ˉ(∞)ˉ)
-            ctx.fillText("click here", 23, 16);
+            ctx.font = "12px 微软雅黑,Verdana";
+	    ctx.fillText(" [Click me]", 23, 10);
             ctx.restore();
         },
         clear: function() {
@@ -457,12 +457,8 @@
             var ctx = s.tree.ctx;
             ctx.save();
         	ctx.beginPath();
-            //深黑色 rgb(35, 31, 32);
-            //RGB(0,139,139)
-            // RGB(102,205,170)
-            // RGB(34,139,34)
-        	ctx.fillStyle = 'RGB(0,128,128)';
-            ctx.shadowColor = '#22b822';
+        	ctx.fillStyle = 'rgb(35, 31, 32)';
+            ctx.shadowColor = 'rgb(35, 31, 32)';
             ctx.shadowBlur = 2;
         	ctx.moveTo(p.x, p.y);
         	ctx.arc(p.x, p.y, s.radius, 0, 2 * Math.PI);
